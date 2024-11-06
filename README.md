@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# FortifyNow: Cybersecurity Education Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Project Repository**: [FortifyNow on GitHub](https://github.com/AD-Archer/FortifyNow)  
+**Wireframe**: [FortifyNow Wireframe on Figma](https://www.figma.com/design/0zgf6t27bsBnxU3dCALsmT/FortifyNow?node-id=0-1&t=6a4APbm8cTAFTNLp-1)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+FortifyNow is an educational platform designed to help users understand the fundamentals of cybersecurity, including password management, two-factor authentication (2FA), USB security keys, and more. The site also integrates the "Have I Been Pwned" API, allowing users to check if their accounts have been part of any known data breaches.
 
-### `npm start`
+## Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Password Management**: A module explaining why strong passwords are essential, how to create them, and tools for managing them securely.
+- **Two-Factor Authentication (2FA)**: An educational section introducing 2FA, why it’s important, and guidance on how to enable it.
+- **USB Security Keys**: Explains the role of USB keys in secure authentication.
+- **Data Breach Check**: Integration with the "Have I Been Pwned" API, allowing users to verify if their credentials have been compromised.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Goals
 
-### `npm test`
+FortifyNow aims to improve cybersecurity awareness among users, providing straightforward information and actionable tips to enhance personal online security.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **Frontend**: HTML, CSS (using Tailwind), JavaScript
+- **Backend**: Python with Flask
+- **API Integration**: "Have I Been Pwned" API for real-time breach checks
+- **Design Tool**: Figma for wireframes and UI planning
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Python 3.x**
+- **Flask**: Install Flask via pip with `pip install flask`
+- **Tailwind CSS**: Optional, for custom styling.
 
-### `npm run eject`
+### Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/AD-Archer/FortifyNow.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd FortifyNow
+   ```
+3. Install the necessary dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Add your "Have I Been Pwned" API key in a `.env` file:
+   ```
+   HIBP_API_KEY=your_api_key_here
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Run the Flask application:
+   ```bash
+   flask run
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Wireframe and Design Reference
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You can view the initial wireframe for the website on Figma: [FortifyNow Wireframe](https://www.figma.com/design/0zgf6t27bsBnxU3dCALsmT/FortifyNow?node-id=0-1&t=6a4APbm8cTAFTNLp-1)
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+FortifyNow/
+├── static/                 # CSS, JS, and image files
+├── templates/              # HTML templates
+├── app.py                  # Main Flask app
+├── .env                    # API keys and other environment variables
+├── requirements.txt        # Project dependencies
+└── README.md               # Project documentation
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Contributions are welcome! Please open an issue or submit a pull request to discuss any changes or improvements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and available under the MIT License.
