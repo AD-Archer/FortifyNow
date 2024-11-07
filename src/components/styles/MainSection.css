@@ -1,0 +1,59 @@
+/* src/components/MainSection.css */
+
+.main-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #FFF;
+  padding: 2rem;
+  min-height: 75vh; /* Ensures the main section fills the majority of the screen */
+}
+
+/* Centering the laptop image and buttons */
+.laptop-image {
+  width: 60%; /* Make the laptop slightly smaller to balance space */
+  max-width: 400px;
+  margin-bottom: 2rem; /* Adds space between the laptop and buttons */
+}
+
+/* Buttons section, aligned horizontally and centered */
+.main-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.main-buttons button {
+  padding: 1rem 1.5rem;
+  background-color: #3498DB;
+  color: #FFF;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  min-width: 120px; /* Minimum width for balance */
+}
+
+.main-buttons button:hover {
+  background-color: #2980B9;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-section {
+    padding: 1rem;
+  }
+
+  .main-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-buttons button {
+    width: 100%; /* Full-width on mobile for easy tapping */
+  }
+}
