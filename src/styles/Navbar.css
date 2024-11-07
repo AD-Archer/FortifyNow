@@ -1,0 +1,113 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff; /* White text for contrast */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar-links li {
+  display: inline-block;
+}
+
+.navbar-links a {
+  color: #fff; /* White text for the links */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #4caf50; /* Green color on hover */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-menu div {
+  width: 30px;
+  height: 4px;
+  background-color: #fff; /* White bars */
+  transition: transform 0.3s ease;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 0; /* Remove gap between the links */
+    margin-top: 0; /* Remove top margin */
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background for dropdown */
+    position: absolute;
+    top: 60px; /* Adjust this to fit just below the navbar */
+    left: 0;
+    padding: 0; /* Remove padding to remove space */
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .hamburger-menu.active div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+  }
+
+  .hamburger-menu.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -6px;
+  }
+
+  .navbar.active {
+    background-color: rgba(0, 0, 0, 0.9); /* Solid dark background when active */
+  }
+}

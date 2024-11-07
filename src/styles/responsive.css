@@ -1,0 +1,120 @@
+/* Global Styles for Mobile First Design */
+@media (max-width: 768px) {
+  /* Main Section Styling */
+  .main-section {
+    margin: 1rem;
+    padding: 2rem 1rem; /* Add a bit more padding for mobile devices */
+  }
+
+  .content-container {
+    padding: 0.5rem;
+    text-align: left; /* Adjust text alignment for smaller screens */
+  }
+
+  .intro-text h1 {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+
+  .intro-text p {
+    font-size: 1rem; /* Reduce font size for better readability on small screens */
+  }
+
+  /* Adjusting the Laptop Image for better scaling */
+  .laptop-image {
+    width: 90%;
+    max-width: 350px; /* Make the image smaller on mobile */
+    margin: 0 auto;
+  }
+
+  /* Main Buttons Section */
+  .main-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Action Buttons */
+  .action-button {
+    width: 100%; /* Make buttons full-width on smaller devices */
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  /* Bottom Section Styling */
+  .bottom-section {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .section-card {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem; /* Spacing between cards */
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .section-card:hover {
+    background-color: #2980b9;
+  }
+}
+
+/* Tablet Support (for screens from 768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust content padding and text alignment for tablet */
+  .main-section {
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  .content-container {
+    text-align: center;
+  }
+
+  .intro-text h1 {
+    font-size: 2.5rem; /* Increase heading size slightly on tablet */
+  }
+
+  .intro-text p {
+    font-size: 1.1rem; /* Increase font size for readability */
+  }
+
+  /* Laptop image scaling for tablets */
+  .laptop-image {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  /* Main Buttons Section on Tablets */
+  .main-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Action Buttons */
+  .action-button {
+    width: auto; /* Allow buttons to be auto-sized */
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* Bottom Section */
+  .bottom-section {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .section-card {
+    width: 30%; /* Make the section cards smaller on tablet */
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

@@ -1,116 +1,110 @@
-/* src/App.css */
+/* Global Styles */
 
-body, html {
+/* Global Variables for Easy Customization */
+:root {
+  --primary-bg-color: #f0f0f0; /* Light concrete-like background */
+  --card-bg-color: #d1d1d1; /* Concrete grey for card background */
+  --card-hover-bg-color: #b0b0b0; /* Slightly darker concrete grey for hover */
+  --text-color: #333333; /* Dark grey text for contrast */
+  --button-bg-color: #4caf50; /* Green button for a bit of contrast */
+  --button-hover-bg-color: #388e3c; /* Darker green for hover */
+  --button-text-color: #ffffff; /* White button text */
+  --border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Roboto', sans-serif;
   height: 100%;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #3498DB, #2C3E50);
+  background-color: var(--primary-bg-color); /* Light concrete background */
+  color: var(--text-color); /* Dark grey text */
+  overflow-x: hidden;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensures the entire viewport height */
-  color: #333;
+/* Simple Button Styles */
+.action-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color); /* Green button */
+  border: none;
+  border-radius: var(--border-radius);
+  width: 220px;
+  margin: 1.5rem auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.action-button:hover {
+  background-color: var(--button-hover-bg-color); /* Darker green on hover */
+}
+
+/* Main Section */
 .main-section {
-  flex: 1; /* Takes up remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 2rem;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.laptop-image {
-  width: 70%; /* Adjust as needed */
-  max-width: 500px;
-  margin-bottom: 2rem;
-}
-
-.main-buttons {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  display: flex;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  margin-top: 4rem; /* Added margin to create space from the navbar */
   flex-direction: column;
-  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  opacity: 1;
 }
 
-.main-buttons button {
-  padding: 1rem 1.5rem;
-  background-color: #3498DB;
-  color: #FFF;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-  width: 200px;
-}
 
-.main-buttons button:hover {
-  background-color: #2980B9;
-  transform: scale(1.05);
-}
-
-/* Ensuring the bottom section fills the bottom width and stays at the bottom */
+/* Bottom Section */
 .bottom-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #2C3E50;
-  padding: 1rem;
-  height: 100px; /* Set height to make it clearly defined at the bottom */
-  width: 100%;
+  padding: 2rem;
+  color: var(--text-color);
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Reduced gap for simplicity */
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
-.bottom-section button {
-  padding: 1rem 1.5rem;
-  background-color: #3498DB;
-  color: #FFF;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-  width: 100%; /* Fill width of container */
+/* Section Card */
+.section-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 30%;
+  height: 200px; /* Slightly smaller card height */
+  background-color: var(--card-bg-color); /* Concrete grey for the card */
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.bottom-section button:hover {
-  background-color: #2980B9;
-  transform: scale(1.05);
+.section-card:hover {
+  background-color: var(--card-hover-bg-color); /* Slight hover effect */
+  transform: translateY(-4px); /* Subtle lift effect */
 }
 
-/* Responsive adjustments */
+/* Responsive Layout */
 @media (max-width: 768px) {
-  .main-section {
-    margin: 1rem;
-    padding: 1rem;
-  }
-
-  .main-buttons {
-    flex-direction: row;
-    gap: 0.5rem;
-    bottom: 1rem;
-    right: 1rem;
-  }
-
-  .main-buttons button {
-    width: auto;
-    flex: 1;
-  }
-
   .bottom-section {
     flex-direction: column;
   }
-
-  .bottom-section button {
-    width: 100%;
+  .section-card {
     margin-bottom: 1rem;
+    flex: 1 1 100%; /* Full width on smaller screens */
   }
 }

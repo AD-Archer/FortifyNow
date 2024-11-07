@@ -1,0 +1,17 @@
+/* Footer Styling */
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Content */
+.footer-bottom p {
+  margin: 0;
+}
