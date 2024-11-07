@@ -20,8 +20,30 @@ function MainSection() {
           <img src="/LaptopImage.svg" alt="Laptop" className="laptop-image" />
         </div>
 
-        {/* Main Buttons Section */}
-        <div className="main-buttons">
+        {/* Main Buttons Section for Desktop */}
+        <div className="main-buttons desktop-buttons">
+          <button
+            className="action-button"
+            onClick={() => (window.location.href = "/passwords")}
+          >
+            Master Passwords
+          </button>
+          <button
+            className="action-button"
+            onClick={() => (window.location.href = "/breaches")}
+          >
+            Understanding Breaches
+          </button>
+          <button
+            className="action-button"
+            onClick={() => (window.location.href = "/protection")}
+          >
+            Security Protection
+          </button>
+        </div>
+
+        {/* Main Buttons Section for Mobile */}
+        <div className="main-buttons mobile-buttons">
           <button
             className="action-button"
             onClick={() => (window.location.href = "/passwords")}

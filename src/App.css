@@ -10,6 +10,7 @@
   --button-hover-bg-color: #388e3c; /* Darker green for hover */
   --button-text-color: #ffffff; /* White button text */
   --border-radius: 8px; /* Rounded corners for a smoother look */
+  --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Common box-shadow */
 }
 
 /* Global Reset */
@@ -22,89 +23,74 @@
 body, html {
   font-family: 'Roboto', sans-serif;
   height: 100%;
-  background-color: var(--primary-bg-color); /* Light concrete background */
-  color: var(--text-color); /* Dark grey text */
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
   overflow-x: hidden;
 }
 
-/* Simple Button Styles */
+/* Button Styles */
 .action-button {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   color: var(--button-text-color);
-  background-color: var(--button-bg-color); /* Green button */
+  background-color: var(--button-bg-color);
   border: none;
   border-radius: var(--border-radius);
   width: 220px;
   margin: 1.5rem auto;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s, background-color 0.3s ease;
 }
 
 .action-button:hover {
-  background-color: var(--button-hover-bg-color); /* Darker green on hover */
+  background-color: var(--button-hover-bg-color);
+  transform: translateY(-4px);
 }
 
-/* Main Section */
-.main-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  margin-top: 4rem; /* Added margin to create space from the navbar */
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: var(--border-radius);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  opacity: 1;
+.action-button:active {
+  transform: translateY(2px);
 }
 
-
-/* Bottom Section */
-.bottom-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  color: var(--text-color);
-  flex-wrap: wrap;
-  gap: 1.5rem; /* Reduced gap for simplicity */
-  border-radius: var(--border-radius);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-}
-
-/* Section Card */
-.section-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 30%;
-  height: 200px; /* Slightly smaller card height */
-  background-color: var(--card-bg-color); /* Concrete grey for the card */
-  color: var(--text-color);
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  cursor: pointer;
-  text-align: center;
-  position: relative;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.section-card:hover {
-  background-color: var(--card-hover-bg-color); /* Slight hover effect */
-  transform: translateY(-4px); /* Subtle lift effect */
-}
 
 /* Responsive Layout */
 @media (max-width: 768px) {
+  /* Adjustments for Main Section */
+  .main-section {
+    padding: 2rem 1rem;
+  }
+
+  /* Button Adjustments */
+  .action-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* h2 Adjustments */
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Bottom Section Adjustments */
   .bottom-section {
     flex-direction: column;
+    align-items: stretch;
   }
+
   .section-card {
     margin-bottom: 1rem;
-    flex: 1 1 100%; /* Full width on smaller screens */
+    flex: 1 1 100%;
+  }
+
+  /* Stack buttons vertically in mobile view */
+  .main-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
   }
 }

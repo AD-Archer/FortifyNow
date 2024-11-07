@@ -5,126 +5,131 @@
   align-items: center;
   min-height: 100vh;
   padding: 4rem 2rem;
+  margin-top: 6rem;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent backdrop */
   backdrop-filter: blur(8px); /* Background blur effect */
   border-radius: var(--border-radius);
   box-shadow: 0 12px 30px var(--shadow-color);
-  position: relative; /* This is crucial for absolute positioning */
-  opacity: 0;
-  animation: fadeInSection 1.5s ease-out forwards; /* Fade-in the entire section */
-  margin-top: 6rem; /* Initial margin for larger screens */
+  position: relative;
+  opacity: 1; /* Ensure section is visible */
 }
 
-/* Mobile-Friendly Adjustments */
-@media (max-width: 768px) {
-  .main-section {
-    margin-top: 8rem; /* Increased margin for better spacing on mobile */
-    padding: 2rem 1rem; /* Adjust padding on smaller screens */
-  }
-
-  .content-container {
-    padding: 1rem;
-  }
-
-  .intro-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .intro-text p {
-    font-size: 1.1rem;
-  }
-
-  /* Image section on mobile */
-  .image-container {
-    margin-bottom: 2rem;
-    opacity: 1;
-    animation: none; /* Remove animation on mobile */
-  }
-
-  .laptop-image {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .main-buttons {
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    position: static; /* Remove absolute positioning */
-    bottom: auto; /* Disable bottom positioning on mobile */
-    right: auto; /* Disable right positioning */
-    align-items: center; /* Center the buttons */
-    opacity: 1;
-    animation: none; /* No animation on mobile */
-  }
-
-  .action-button {
-    width: 100%; /* Full width on mobile */
-    padding: 1rem;
-    font-size: 1.2rem;
-  }
+/* Content Container */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* Section Fade-in Animation */
-@keyframes fadeInSection {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Heading Fade-in Animation */
-@keyframes fadeInText {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Image Fade-in Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.main-buttons .learn-more-text {
-  font-size: 1.5rem;
+/* Intro Text Styling */
+.intro-text h1, .intro-text h2 {
   color: var(--text-color);
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem; /* Default size for mobile */
 }
 
+/* Larger Text for Desktop */
+@media (min-width: 1024px) {
+  .intro-text h1 {
+    font-size: 3rem; /* Larger h1 text for desktop */
+  }
+
+  .intro-text h2 {
+    font-size: 1.8rem; /* Larger h2 text for desktop */
+  }
+}
+
+/* Image Styling */
+.laptop-image {
+  width: 80%;
+  max-width: 450px;
+  margin: 2rem 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+/* Button Styling */
 .action-button {
   padding: 1rem 2rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* Default font size */
   color: var(--button-text-color);
-  background-color: var(--button-bg-color);
+  background-color: var(--button-bg-color); /* Green button */
   border: none;
   border-radius: var(--border-radius);
-  width: 200px;
-  margin: 0 auto;
   box-shadow: 0 8px 16px var(--shadow-color);
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s ease-in-out;
+  width: 250px; /* Increased button width */
+  margin: 1rem;
 }
 
 .action-button:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 25px var(--hover-shadow-color); /* Add hover shadow */
+  box-shadow: 0 12px 25px var(--hover-shadow-color);
 }
 
 .action-button:active {
   transform: translateY(2px);
+}
+
+/* Desktop Button Section */
+.main-buttons.desktop-buttons {
+  display: flex;
+  gap: 2rem; /* Increased gap for larger buttons */
+  justify-content: center;
+  margin-top: 3rem; /* Increased top margin */
+}
+
+/* Mobile Button Section (Hidden by default) */
+.main-buttons.mobile-buttons {
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Mobile Media Query */
+@media (max-width: 768px) {
+  /* Hide Desktop Buttons on Mobile */
+  .main-buttons.desktop-buttons {
+    display: none;
+  }
+
+  /* Show Mobile Buttons on Mobile */
+  .main-buttons.mobile-buttons {
+    display: flex;
+  }
+
+  /* Smaller font size for intro text on mobile */
+  .intro-text h1 {
+    font-size: 1.5rem; /* Smaller font for mobile */
+  }
+
+  .intro-text h2 {
+    font-size: 1rem; /* Smaller font for mobile */
+  }
+
+  /* Tiny space between header and main section on mobile */
+  .intro-text {
+    margin-bottom: 0.3rem; /* Tiny space added here */
+  }
+
+  .main-section {
+    padding: 2rem 1rem;
+    margin-top: 4rem; /* Adjust margin for mobile */
+  }
+
+  .laptop-image {
+    max-width: 350px;
+  }
+
+  /* Adjust mobile button size */
+  .action-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
 }
