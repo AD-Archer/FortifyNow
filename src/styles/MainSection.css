@@ -6,7 +6,7 @@
   flex-direction: column;
   min-height: 100vh;
   padding: 4rem 2rem;
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent backdrop */
+  /* background-color: rgba(0, 0, 0, 0.3); Semi-transparent backdrop */
   backdrop-filter: blur(8px); /* Background blur effect */
   border-radius: var(--border-radius);
   box-shadow: 0 12px 30px var(--shadow-color);

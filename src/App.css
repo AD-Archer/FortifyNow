@@ -22,7 +22,7 @@
 
 html, body {
   font-family: 'Roboto', sans-serif;
-  height: 100%;
+  height: 100%; /* Ensure full height for the viewport */
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   overflow-x: hidden;
@@ -30,9 +30,15 @@ html, body {
   flex-direction: column; /* Allow page content to fill the available space */
 }
 
-/* Main Content Wrapper to Take up Available Space */
+/* App Layout */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Ensures the app fills the entire height of the viewport */
+}
+
 .main-container {
-  flex: 1; /* Ensures that the content section fills available space */
+  flex: 1; /* Ensures content section fills the remaining space */
 }
 
 /* Footer Styles */
@@ -68,46 +74,33 @@ footer {
   transform: translateY(2px);
 }
 
+/* Educational Resources Page Styles */
+.educational-resources {
+  padding: 80px 20px 20px; /* Adjusted top padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f4f4f9;
+  flex-grow: 1; /* Ensures this section takes up available space */
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
-  /* Adjustments for Main Section */
-  .main-section {
-    padding: 2rem 1rem;
+  .educational-resources {
+    padding: 50px 20px 20px;  /* Adjust padding for mobile view */
   }
 
+  .educational-resources h2 {
+    font-size: 1.5rem;
+  }
+
+  .educational-resources ul {
+    padding-left: 20px;
+  }
+  
   /* Button Adjustments */
   .action-button {
     width: 100%;
     padding: 1rem;
     font-size: 1rem;
   }
-
-  /* h2 Adjustments */
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Bottom Section Adjustments */
-  .bottom-section {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .section-card {
-    margin-bottom: 1rem;
-    flex: 1 1 100%;
-  }
-
-  /* Stack buttons vertically in mobile view */
-  .main-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    position: relative;
-  }
 }
-

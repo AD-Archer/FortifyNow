@@ -7,6 +7,9 @@ import PasswordGenerator from "./components/PasswordGenerator";
 import HaveIBeenPwned from "./components/HaveIBeenPwned"; // Updated import
 import Footer from "./components/Footer";
 
+// Import EducationalResources
+import EducationalResources from "./components/EducationalResources";
+
 // Import global styles
 import "./App.css";
 
@@ -24,8 +27,13 @@ function App() {
           {/* Define routes for each page */}
           <Route path="/" element={<MainSection />} />
           <Route path="/password-generator" element={<PasswordGenerator />} />
-          <Route path="/have-i-been-pwned" element={<HaveIBeenPwned />} />{" "}
-          {/* Updated route path */}
+          <Route path="/have-i-been-pwned" element={<HaveIBeenPwned />} />
+
+          {/* Link to the Educational Resources hub */}
+          <Route
+            path="/educational-resources"
+            element={<EducationalResources />}
+          />
         </Routes>
 
         <Footer />

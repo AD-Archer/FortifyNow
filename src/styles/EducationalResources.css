@@ -1,0 +1,86 @@
+/* src/styles/EducationalResources.css */
+
+/* General styling for the educational resources page */
+.educational-resources {
+  padding: 80px 20px 20px;  /* Default padding for desktop */
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f4f4f9;
+}
+
+.resources-header {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.resources-description {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.module-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.module-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.module-item:hover {
+  transform: translateY(-10px);
+}
+
+.module-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.module-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.module-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #50cc38;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.module-link:hover {
+  background-color: green;
+}
+
+@media (max-width: 768px) {
+  .educational-resources {
+    padding: 200px 15px 15px;  /* Increased top padding for more space on mobile */
+  }
+
+  .resources-header {
+    font-size: 2rem;
+  }
+
+  .resources-description {
+    font-size: 1rem;
+  }
+
+  .module-list {
+    grid-template-columns: 1fr;
+  }
+}
