@@ -20,12 +20,29 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   font-family: 'Roboto', sans-serif;
   height: 100%;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column; /* Allow page content to fill the available space */
+}
+
+/* Main Content Wrapper to Take up Available Space */
+.main-container {
+  flex: 1; /* Ensures that the content section fills available space */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto; /* Push the footer to the bottom */
 }
 
 /* Button Styles */
@@ -50,7 +67,6 @@ body, html {
 .action-button:active {
   transform: translateY(2px);
 }
-
 
 /* Responsive Layout */
 @media (max-width: 768px) {
@@ -94,3 +110,4 @@ body, html {
     position: relative;
   }
 }
+

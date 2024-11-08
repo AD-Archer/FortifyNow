@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +11,10 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${menuOpen ? "active" : ""}`}>
-      <div className="navbar-brand">FortifyNow</div>
+      <div className="navbar-brand">
+        <Link to="/">FortifyNow</Link>{" "}
+        {/* Clicking the brand name also takes the user home */}
+      </div>
       <div
         className={`hamburger-menu ${menuOpen ? "active" : ""}`}
         onClick={toggleMenu}
@@ -21,13 +25,16 @@ function Navbar() {
       </div>
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <a href="/educational-resources">Educational Resources</a>
+          <Link to="/">Home</Link> {/* New Home link */}
         </li>
         <li>
-          <a href="/haveibeenpwned">Have I Been Pwned</a>
+          <Link to="/educational-resources">Educational Resources</Link>
         </li>
         <li>
-          <a href="/make-password">Make a Password</a>
+          <Link to="/have-i-been-pwned">Check Pwned</Link>
+        </li>
+        <li>
+          <Link to="/password-generator">Make a Password</Link>
         </li>
       </ul>
     </nav>

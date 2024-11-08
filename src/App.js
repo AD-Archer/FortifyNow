@@ -1,25 +1,38 @@
 // src/App.js
-import React from "react";
+import React from "react"; // Move this import to the top
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import MainSection from "./components/MainSection";
+import PasswordGenerator from "./components/PasswordGenerator";
+import HaveIBeenPwned from "./components/HaveIBeenPwned"; // Updated import
 import Footer from "./components/Footer";
-// Import the global styles first
-import './App.css'; 
 
-// Import sections specifically
-import './styles/MainSection.css';
-import './styles/Footer.css';
-import './styles/animations.css';
-import './styles/responsive.css';
+// Import global styles
+import "./App.css";
 
+// Import section-specific styles
+import "./styles/MainSection.css";
+import "./styles/Footer.css";
+import "./styles/animations.css";
+import "./styles/responsive.css";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <MainSection />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+
+        <Routes>
+          {/* Define routes for each page */}
+          <Route path="/" element={<MainSection />} />
+          <Route path="/password-generator" element={<PasswordGenerator />} />
+          <Route path="/have-i-been-pwned" element={<HaveIBeenPwned />} />{" "}
+          {/* Updated route path */}
+        </Routes>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
