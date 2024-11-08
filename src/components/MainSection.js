@@ -38,7 +38,7 @@ function MainSection() {
             className="action-button"
             onClick={() => (window.location.href = "/protection")}
           >
-            Security Protection
+            Security and Protection
           </button>
         </div>
 
@@ -60,7 +60,7 @@ function MainSection() {
             className="action-button"
             onClick={() => (window.location.href = "/protection")}
           >
-            Security Protection
+            Security and Protection
           </button>
         </div>
       </div>

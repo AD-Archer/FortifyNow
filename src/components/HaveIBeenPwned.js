@@ -1,5 +1,5 @@
-// src/components/HaveIBeenPwned.js
 import React, { useState } from "react";
+import "../styles/HaveIBeenPwned.css";
 
 const HaveIBeenPwned = () => {
   const [email, setEmail] = useState("");
@@ -36,6 +36,17 @@ const HaveIBeenPwned = () => {
       setError("Something went wrong, please try again later.");
     } finally {
       setLoading(false);
+    }
+  };
+
+  // Redirect with confirmation
+  const handleRedirect = () => {
+    const confirmRedirect = window.confirm(
+      "You are about to leave the site and visit Have I Been Pwned. Do you want to proceed?"
+    );
+
+    if (confirmRedirect) {
+      window.location.href = "https://haveibeenpwned.com";
     }
   };
 
@@ -82,6 +93,10 @@ const HaveIBeenPwned = () => {
       )}
 
       {error && <div className="error">{error}</div>}
+
+      {/* Button to redirect to Have I Been Pwned */}
+      <button onClick={handleRedirect}>Visit Have I Been Pwned</button>
+      <label>If check email button isn't working click here to visit the full site</label>
     </div>
   );
 };

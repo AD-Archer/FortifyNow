@@ -1,30 +1,43 @@
+/* Ensure the body and html take up the full height */
+html, body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Pwned Check Page Styles */
 .pwned-check-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   background-color: #fafafa;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures the container takes full height of the viewport */
+  justify-content: center; /* Centers the content vertically */
+  box-sizing: border-box;
 }
 
-h2 {
+.pwned-check-container h2 {
   font-size: 2rem;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Increased margin to prevent clipping */
+  text-align: center;
+  padding: 0 15px; /* Ensure padding around header on small screens */
 }
 
-input {
-  padding: 10px;
+.pwned-check-container input {
+  padding: 12px;
   font-size: 1rem;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px; /* Wider max-width for larger screens */
+  box-sizing: border-box; /* Prevents clipping */
 }
 
-button {
-  padding: 12px 25px;
+.pwned-check-container button {
+  padding: 14px 28px;
   font-size: 1rem;
   background-color: #4caf50;
   color: white;
@@ -32,42 +45,107 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%; /* Button spans full width */
+  max-width: 500px; /* Ensure button width aligns with input */
+  box-sizing: border-box;
 }
 
-button:hover {
+.pwned-check-container button:hover {
   background-color: #388e3c;
 }
 
-button:disabled {
+.pwned-check-container button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
-.result {
-  margin-top: 20px;
+.pwned-check-container .result {
+  margin-top: 30px;
   font-size: 1.2rem;
   color: #333;
+  text-align: center; /* Center-align results */
+  padding: 0 15px; /* Ensure padding on smaller screens */
 }
 
-.error {
-  margin-top: 20px;
+.pwned-check-container .error {
+  margin-top: 30px;
+  font-size: 1.2rem;
   color: red;
+  text-align: center;
 }
 
-ul {
+.pwned-check-container ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 20px; /* Added space between result and list */
 }
 
-ul li {
-  margin-bottom: 10px;
+.pwned-check-container ul li {
+  margin-bottom: 12px;
+  text-align: center; /* Center-align list items */
 }
 
-ul li a {
+.pwned-check-container ul li a {
   color: #4caf50;
+  font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-ul li a:hover {
+.pwned-check-container ul li a:hover {
+  color: #388e3c;
   text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .pwned-check-container {
+    padding: 20px;
+  }
+
+  .pwned-check-container h2 {
+    font-size: 1.8rem; /* Slightly smaller text on mobile */
+    margin-bottom: 25px;
+  }
+
+  .pwned-check-container input {
+    max-width: 90%; /* Input takes up more space on smaller screens */
+    font-size: 1rem;
+    margin-bottom: 18px; /* Adjusted margin */
+  }
+
+  .pwned-check-container button {
+    max-width: 90%; /* Button width adjusted */
+    font-size: 1rem;
+  }
+
+  .pwned-check-container .result, .pwned-check-container .error {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    margin-top: 25px;
+  }
+
+  .pwned-check-container ul li {
+    font-size: 1rem; /* Adjust list item font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .pwned-check-container h2 {
+    font-size: 1.6rem; /* Even smaller text on very small screens */
+    margin-bottom: 20px;
+  }
+
+  .pwned-check-container input {
+    max-width: 90%;
+    font-size: 0.9rem; /* Slightly smaller font size for input */
+  }
+
+  .pwned-check-container button {
+    max-width: 90%;
+    font-size: 1rem;
+  }
+
+  .pwned-check-container .result, .pwned-check-container .error {
+    font-size: 1rem;
+  }
 }

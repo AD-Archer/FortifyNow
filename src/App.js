@@ -13,8 +13,6 @@ import "./App.css";
 // Import section-specific styles
 import "./styles/MainSection.css";
 import "./styles/Footer.css";
-import "./styles/animations.css";
-import "./styles/responsive.css";
 
 function App() {
   return (
