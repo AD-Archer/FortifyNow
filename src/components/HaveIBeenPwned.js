@@ -52,7 +52,7 @@ const HaveIBeenPwned = () => {
 
   return (
     <div className="pwned-check-container">
-      <h2>Check if your email has been pwned!</h2>
+      <h2>Check if your email address is in a data breach!</h2>
 
       <input
         type="email"
@@ -96,7 +96,9 @@ const HaveIBeenPwned = () => {
 
       {/* Button to redirect to Have I Been Pwned */}
       <button onClick={handleRedirect}>Visit Have I Been Pwned</button>
-      <label>If check email button isn't working click here to visit the full site</label>
+      <label>
+        If check email button isn't working click here to visit the full site
+      </label>
     </div>
   );
 };

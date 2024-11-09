@@ -21,8 +21,8 @@ function EducationalResources() {
             A comprehensive guide to creating secure passwords, using password
             managers, and understanding password strength.
           </p>
-          <Link to="/work-in-progress" className="module-link">
-            Coming Soon
+          <Link to="/mastering-passwords" className="module-link">
+            Click here
           </Link>
         </div>
 

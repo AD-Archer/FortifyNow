@@ -9,6 +9,10 @@ import Footer from "./components/Footer";
 import WorkInProgress from "./components/WorkInProgress";
 import EducationalResources from "./components/EducationalResources";
 
+//Modules
+import MasteringPasswords from "./components/LibaryModules/MasteringPasswords";
+
+
 // Import global styles
 import "./App.css";
 
@@ -34,6 +38,9 @@ function App() {
             path="/educational-resources"
             element={<EducationalResources />}
           />
+
+          {/* Link to the Mastering Passwords module */}
+          <Route path="/mastering-passwords" element={<MasteringPasswords />} />
         </Routes>
 
         <Footer />

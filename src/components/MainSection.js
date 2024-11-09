@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "../styles/MainSection.css";
 
 function MainSection() {
@@ -22,46 +23,28 @@ function MainSection() {
 
         {/* Main Buttons Section for Desktop */}
         <div className="main-buttons desktop-buttons">
-          <button
-            className="action-button"
-            onClick={() => (window.location.href = "/work-in-progress")}
-          >
+          <Link to="/mastering-passwords" className="action-button">
             Master Passwords
-          </button>
-          <button
-            className="action-button"
-            onClick={() => (window.location.href = "/work-in-progress")}
-          >
-            Understanding Breaches
-          </button>
-          <button
-            className="action-button"
-            onClick={() => (window.location.href = "/work-in-progress")}
-          >
-            Security and Protection
-          </button>
+          </Link>
+          <Link to="/password-generator" className="action-button">
+            Make a new Password
+          </Link>
+          <Link to="/have-i-been-pwned" className="action-button">
+            Check if you've been leaked?
+          </Link>
         </div>
 
         {/* Main Buttons Section for Mobile */}
         <div className="main-buttons mobile-buttons">
-          <button
-            className="action-button"
-            onClick={() => (window.location.href = "/work-in-progress")}
-          >
+          <Link to="/mastering-passwords" className="action-button">
             Master Passwords
-          </button>
-          <button
-            className="action-button"
-            onClick={() => (window.location.href = "/work-in-progress")}
-          >
-            Understanding Breaches
-          </button>
-          <button
-            className="action-button"
-            onClick={() => (window.location.href = "/work-in-progress")}
-          >
-            Security and Protection
-          </button>
+          </Link>
+          <Link to="/password-generator" className="action-button">
+            Make a new Password
+          </Link>
+          <Link to="/have-i-been-pwned" className="action-button">
+            Check have you been leaked
+          </Link>
         </div>
       </div>
     </div>
