@@ -129,3 +129,37 @@
     font-size: 1rem; /* Smaller font size for mobile */
   }
 }
+
+/* Floating Animation for the Image */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse Animation for Buttons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Applying Animation to the Image */
+.laptop-image {
+  width: 80%;
+  max-width: 450px;
+  margin: 2rem 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 40px var(--shadow-color);
+  animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+

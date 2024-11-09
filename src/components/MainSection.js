@@ -24,19 +24,19 @@ function MainSection() {
         <div className="main-buttons desktop-buttons">
           <button
             className="action-button"
-            onClick={() => (window.location.href = "/passwords")}
+            onClick={() => (window.location.href = "/work-in-progress")}
           >
             Master Passwords
           </button>
           <button
             className="action-button"
-            onClick={() => (window.location.href = "/breaches")}
+            onClick={() => (window.location.href = "/work-in-progress")}
           >
             Understanding Breaches
           </button>
           <button
             className="action-button"
-            onClick={() => (window.location.href = "/protection")}
+            onClick={() => (window.location.href = "/work-in-progress")}
           >
             Security and Protection
           </button>
@@ -46,19 +46,19 @@ function MainSection() {
         <div className="main-buttons mobile-buttons">
           <button
             className="action-button"
-            onClick={() => (window.location.href = "/passwords")}
+            onClick={() => (window.location.href = "/work-in-progress")}
           >
             Master Passwords
           </button>
           <button
             className="action-button"
-            onClick={() => (window.location.href = "/breaches")}
+            onClick={() => (window.location.href = "/work-in-progress")}
           >
             Understanding Breaches
           </button>
           <button
             className="action-button"
-            onClick={() => (window.location.href = "/protection")}
+            onClick={() => (window.location.href = "/work-in-progress")}
           >
             Security and Protection
           </button>

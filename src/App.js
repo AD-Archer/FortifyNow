@@ -6,8 +6,7 @@ import MainSection from "./components/MainSection";
 import PasswordGenerator from "./components/PasswordGenerator";
 import HaveIBeenPwned from "./components/HaveIBeenPwned"; // Updated import
 import Footer from "./components/Footer";
-
-// Import EducationalResources
+import WorkInProgress from "./components/WorkInProgress";
 import EducationalResources from "./components/EducationalResources";
 
 // Import global styles
@@ -28,6 +27,7 @@ function App() {
           <Route path="/" element={<MainSection />} />
           <Route path="/password-generator" element={<PasswordGenerator />} />
           <Route path="/have-i-been-pwned" element={<HaveIBeenPwned />} />
+          <Route path="/work-in-progress" element={<WorkInProgress />} />
 
           {/* Link to the Educational Resources hub */}
           <Route
