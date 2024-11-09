@@ -1,5 +1,6 @@
 # FortifyNow: Cybersecurity Education Site
-
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/fortify-now?name=Website)
+--
 **Project Repository**: [FortifyNow on GitHub](https://github.com/AD-Archer/FortifyNow)  
 **Wireframe**: [FortifyNow Wireframe on Figma](https://www.figma.com/design/0zgf6t27bsBnxU3dCALsmT/FortifyNow?node-id=0-1&t=6a4APbm8cTAFTNLp-1)
 
