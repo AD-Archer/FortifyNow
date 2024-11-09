@@ -21,7 +21,6 @@ FortifyNow aims to improve cybersecurity awareness among users, providing straig
 ## Technologies Used
 
 - **Frontend**: HTML, CSS (using Tailwind), JavaScript
-- **Backend**: Python with Flask
 - **API Integration**: "Have I Been Pwned" API for real-time breach checks
 - **Design Tool**: Figma for wireframes and UI planning
 
@@ -67,7 +66,6 @@ You can view the initial wireframe for the website on Figma: [FortifyNow Wirefra
 FortifyNow/
 ├── static/                 # CSS, JS, and image files
 ├── templates/              # HTML templates
-├── app.py                  # Main Flask app
 ├── .env                    # API keys and other environment variables
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
