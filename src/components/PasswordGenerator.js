@@ -3,7 +3,7 @@ import "../styles/PasswordGenerator.css";
 
 const PasswordGenerator = () => {
   const [password, setPassword] = useState("");
-  const [passwordLength, setPasswordLength] = useState(12);
+  const [passwordLength] = useState(12);
 
   // Array of characters to use in the password (no special characters)
   const characters =

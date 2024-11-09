@@ -1,7 +1,7 @@
 /* Navbar Styling */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribute items evenly */
   align-items: center;
   padding: 1rem 2rem;
   position: fixed;
@@ -19,7 +19,7 @@
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #fff; /* White text for contrast */
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -27,8 +27,11 @@
 /* Navbar Links */
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  justify-content: space-evenly; /* Evenly space the items */
+  gap: 1rem; /* Reduce the gap to a smaller value */
   list-style: none;
+  margin: 0; /* Remove any margin that might be affecting spacing */
+  padding: 0; /* Remove any padding */
 }
 
 .navbar-links li {
@@ -36,7 +39,7 @@
 }
 
 .navbar-links a {
-  color: #fff; /* White text for the links */
+  color: #fff;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -44,7 +47,7 @@
 }
 
 .navbar-links a:hover {
-  color: #4caf50; /* Green color on hover */
+  color: #4caf50;
 }
 
 /* Hamburger Menu */
@@ -59,7 +62,7 @@
 .hamburger-menu div {
   width: 30px;
   height: 4px;
-  background-color: #fff; /* White bars */
+  background-color: #fff;
   transition: transform 0.3s ease;
 }
 
@@ -72,43 +75,31 @@
   .navbar-links {
     display: none;
     flex-direction: column;
-    gap: 0; /* Remove gap between the links */
-    margin-top: 0; /* Remove top margin */
+    gap: 0;
+    margin-top: 0;
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark background for dropdown */
+    background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
-    top: 60px; /* Adjust this to fit just below the navbar */
+    top: 60px;
     left: 0;
-    padding: 0; /* Remove padding to remove space */
+    padding: 0;
   }
 
   .navbar-links.active {
     display: flex;
+    justify-content: space-evenly;
+  }
+
+  .navbar-links li {
+    width: 100%; /* Ensure links take up full width on mobile */
   }
 
   .hamburger-menu {
     display: flex;
   }
 
-  .hamburger-menu.active div:nth-child(1) {
-    transform: rotate(45deg);
-    position: relative;
-    top: 6px;
-  }
-
-  .hamburger-menu.active div:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-menu.active div:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -6px;
-  }
-
   .navbar.active {
-    background-color: rgba(0, 0, 0, 0.9); /* Solid dark background when active */
+    background-color: rgba(0, 0, 0, 0.9);
   }
 }
-

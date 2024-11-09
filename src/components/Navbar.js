@@ -6,14 +6,13 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen((prevMenuOpen) => !prevMenuOpen); // Toggle the menu open/close state
+    setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
   return (
     <nav className={`navbar ${menuOpen ? "active" : ""}`}>
       <div className="navbar-brand">
-        <Link to="/">FortifyNow</Link>{" "}
-        {/* Clicking the brand name also takes the user home */}
+        <Link to="/">FortifyNow</Link>
       </div>
       <div
         className={`hamburger-menu ${menuOpen ? "active" : ""}`}
@@ -25,7 +24,7 @@ function Navbar() {
       </div>
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <Link to="/">Home</Link> {/* New Home link */}
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/educational-resources">Educational Resources</Link>
