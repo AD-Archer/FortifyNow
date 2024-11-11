@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/HandlingBreaches.css"; // Add styles for this module
+import "./styles/SharedModuleStyles.css"; // Update path to match actual directory
 
 const HandlingBreaches = () => {
   return (

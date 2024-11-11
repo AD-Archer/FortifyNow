@@ -1,0 +1,69 @@
+.handling-breaches-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 6rem;
+}
+
+.handling-breaches-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.handling-breaches-header h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.handling-breaches-header p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.handling-breaches-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.handling-breaches-content-block {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.handling-breaches-content-block h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.handling-breaches-content-block p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.handling-breaches-content-block ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.handling-breaches-content-block li {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.handling-breaches-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 

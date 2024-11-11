@@ -33,8 +33,8 @@ function EducationalResources() {
             Learn how to check for data breaches and how to respond effectively
             if your information is compromised.
           </p>
-          <Link to="/work-in-progress" className="module-link">
-            Coming Soon
+          <Link to="/handling-breaches" className="module-link">
+            Click here
           </Link>
         </div>
 
@@ -45,8 +45,8 @@ function EducationalResources() {
             Discover the importance of two-factor authentication (2FA), security
             keys, and device protection methods.
           </p>
-          <Link to="/work-in-progress" className="module-link">
-            Coming Soon
+          <Link to="/security-protection" className="module-link">
+            Click here
           </Link>
         </div>
 
@@ -59,8 +59,8 @@ function EducationalResources() {
             Dive deeper into the world of 2FA and learn how to implement it
             across various platforms to strengthen your security.
           </p>
-          <Link to="/work-in-progress" className="module-link">
-            Coming Soon
+          <Link to="/two-factor-auth" className="module-link">
+            Click here
           </Link>
         </div>
 
@@ -72,8 +72,8 @@ function EducationalResources() {
             and what to do if you’re a victim to protect your sensitive
             information.
           </p>
-          <Link to="/work-in-progress" className="module-link">
-            Coming Soon
+          <Link to="/phishing-awareness" className="module-link">
+            Click here
           </Link>
         </div>
       </div>

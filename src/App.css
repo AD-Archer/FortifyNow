@@ -34,7 +34,7 @@ html, body {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;  /* Ensures the app fills the entire height of the viewport */
+  min-height: 100vh;
 }
 
 .main-container {
@@ -103,4 +103,22 @@ footer {
     padding: 1rem;
     font-size: 1rem;
   }
+}
+
+/* Add these new styles */
+.main-section,
+.educational-resources,
+.password-generator,
+.have-i-been-pwned,
+.handling-breaches-container,
+.security-protection-container,
+.two-factor-auth-container,
+.phishing-awareness-container,
+.work-in-progress {
+  padding-top: 80px; /* Consistent top padding for all pages */
+  min-height: calc(100vh - 60px); /* Adjust based on your footer height */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }

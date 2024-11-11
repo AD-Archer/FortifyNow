@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/SharedModuleStyles.css";
+import "../LibraryModules/styles/SharedModuleStyles.css";
 
 const MasteringPasswords = () => {
   return (
@@ -67,4 +67,4 @@ const MasteringPasswords = () => {
   );
 };
 
-export default MasteringPasswords;
+export default MasteringPasswords; 

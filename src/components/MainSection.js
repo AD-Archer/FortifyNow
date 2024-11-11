@@ -1,8 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { useNavigate } from "react-router-dom";
 import "../styles/MainSection.css";
 
 function MainSection() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    window.scrollTo(0, 0);
+    navigate(path);
+  };
+
   return (
     <div className="main-section">
       <div className="content-container">
@@ -23,28 +30,46 @@ function MainSection() {
 
         {/* Main Buttons Section for Desktop */}
         <div className="main-buttons desktop-buttons">
-          <Link to="/mastering-passwords" className="action-button">
+          <button 
+            onClick={() => handleNavigation('/mastering-passwords')} 
+            className="action-button"
+          >
             Master Passwords
-          </Link>
-          <Link to="/password-generator" className="action-button">
+          </button>
+          <button 
+            onClick={() => handleNavigation('/password-generator')} 
+            className="action-button"
+          >
             Make a new Password
-          </Link>
-          <Link to="/have-i-been-pwned" className="action-button">
+          </button>
+          <button 
+            onClick={() => handleNavigation('/have-i-been-pwned')} 
+            className="action-button"
+          >
             Check if you've been leaked?
-          </Link>
+          </button>
         </div>
 
         {/* Main Buttons Section for Mobile */}
         <div className="main-buttons mobile-buttons">
-          <Link to="/mastering-passwords" className="action-button">
+          <button 
+            onClick={() => handleNavigation('/mastering-passwords')} 
+            className="action-button"
+          >
             Master Passwords
-          </Link>
-          <Link to="/password-generator" className="action-button">
+          </button>
+          <button 
+            onClick={() => handleNavigation('/password-generator')} 
+            className="action-button"
+          >
             Make a new Password
-          </Link>
-          <Link to="/have-i-been-pwned" className="action-button">
+          </button>
+          <button 
+            onClick={() => handleNavigation('/have-i-been-pwned')} 
+            className="action-button"
+          >
             Check have you been leaked
-          </Link>
+          </button>
         </div>
       </div>
     </div>

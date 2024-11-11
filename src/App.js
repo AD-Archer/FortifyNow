@@ -1,16 +1,23 @@
 // src/App.js
-import React from "react"; // Move this import to the top
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import MainSection from "./components/MainSection";
 import PasswordGenerator from "./components/PasswordGenerator";
-import HaveIBeenPwned from "./components/HaveIBeenPwned"; // Updated import
+import HaveIBeenPwned from "./components/HaveIBeenPwned";
 import Footer from "./components/Footer";
 import WorkInProgress from "./components/WorkInProgress";
 import EducationalResources from "./components/EducationalResources";
+import HandlingBreaches from "./components/LibraryModules/HandlingBreaches";
 
 //Modules
 import MasteringPasswords from "./components/LibaryModules/MasteringPasswords";
+
+// Add these imports
+import SecurityProtection from "./components/LibraryModules/SecurityProtection";
+import TwoFactorAuth from "./components/LibraryModules/TwoFactorAuth";
+import PhishingAwareness from "./components/LibraryModules/PhishingAwareness";
 
 
 // Import global styles
@@ -24,23 +31,27 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Navbar />
 
         <Routes>
-          {/* Define routes for each page */}
           <Route path="/" element={<MainSection />} />
           <Route path="/password-generator" element={<PasswordGenerator />} />
           <Route path="/have-i-been-pwned" element={<HaveIBeenPwned />} />
           <Route path="/work-in-progress" element={<WorkInProgress />} />
 
-          {/* Link to the Educational Resources hub */}
           <Route
             path="/educational-resources"
             element={<EducationalResources />}
           />
 
-          {/* Link to the Mastering Passwords module */}
           <Route path="/mastering-passwords" element={<MasteringPasswords />} />
+
+          <Route path="/handling-breaches" element={<HandlingBreaches />} />
+
+          <Route path="/security-protection" element={<SecurityProtection />} />
+          <Route path="/two-factor-auth" element={<TwoFactorAuth />} />
+          <Route path="/phishing-awareness" element={<PhishingAwareness />} />
         </Routes>
 
         <Footer />

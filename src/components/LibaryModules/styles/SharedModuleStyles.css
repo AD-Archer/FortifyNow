@@ -1,0 +1,171 @@
+/* Common container styles for all modules */
+.security-protection-container,
+.two-factor-auth-container,
+.phishing-awareness-container,
+.handling-breaches-container,
+.mastering-passwords-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 6rem;
+}
+
+/* Common header styles for all modules */
+.security-protection-header,
+.two-factor-auth-header,
+.phishing-awareness-header,
+.handling-breaches-header,
+.mastering-passwords-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.security-protection-header h1,
+.two-factor-auth-header h1,
+.phishing-awareness-header h1,
+.handling-breaches-header h1,
+.mastering-passwords-header h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.security-protection-header p,
+.two-factor-auth-header p,
+.phishing-awareness-header p,
+.handling-breaches-header p,
+.mastering-passwords-header p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Common content styles for all modules */
+.security-protection-content,
+.two-factor-auth-content,
+.phishing-awareness-content,
+.handling-breaches-content,
+.mastering-passwords-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.security-protection-content-block,
+.two-factor-auth-content-block,
+.phishing-awareness-content-block,
+.handling-breaches-content-block,
+.mastering-passwords-content-block {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Common heading styles */
+.security-protection-content-block h2,
+.two-factor-auth-content-block h2,
+.phishing-awareness-content-block h2,
+.handling-breaches-content-block h2,
+.mastering-passwords-content-block h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Common text styles */
+.security-protection-content-block p,
+.two-factor-auth-content-block p,
+.phishing-awareness-content-block p,
+.handling-breaches-content-block p,
+.mastering-passwords-content-block p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Common list styles */
+.security-protection-content-block ul,
+.two-factor-auth-content-block ul,
+.phishing-awareness-content-block ul,
+.handling-breaches-content-block ul,
+.mastering-passwords-content-block ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.security-protection-content-block li,
+.two-factor-auth-content-block li,
+.phishing-awareness-content-block li,
+.handling-breaches-content-block li,
+.mastering-passwords-content-block li {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Emoji display styles */
+.emoji-display {
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.emoji-display:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .security-protection-container,
+  .two-factor-auth-container,
+  .phishing-awareness-container,
+  .handling-breaches-container,
+  .mastering-passwords-container {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .emoji-display {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+
+  .security-protection-header h1,
+  .two-factor-auth-header h1,
+  .phishing-awareness-header h1,
+  .handling-breaches-header h1,
+  .mastering-passwords-header h1 {
+    font-size: 2rem;
+  }
+
+  .security-protection-content-block h2,
+  .two-factor-auth-content-block h2,
+  .phishing-awareness-content-block h2,
+  .handling-breaches-content-block h2,
+  .mastering-passwords-content-block h2 {
+    font-size: 1.5rem;
+  }
+} 
