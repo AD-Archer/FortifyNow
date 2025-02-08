@@ -94,6 +94,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Make list items interactive */
 .security-protection-content-block li,
 .two-factor-auth-content-block li,
 .phishing-awareness-content-block li,
@@ -102,6 +103,40 @@
   color: #555;
   line-height: 1.6;
   margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.security-protection-content-block li:hover,
+.two-factor-auth-content-block li:hover,
+.phishing-awareness-content-block li:hover,
+.handling-breaches-content-block li:hover,
+.mastering-passwords-content-block li:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Add a subtle indicator that items are clickable */
+.security-protection-content-block li::before,
+.two-factor-auth-content-block li::before,
+.phishing-awareness-content-block li::before,
+.handling-breaches-content-block li::before,
+.mastering-passwords-content-block li::before {
+  content: "🔍";
+  font-size: 0.8em;
+  margin-right: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.security-protection-content-block li:hover::before,
+.two-factor-auth-content-block li:hover::before,
+.phishing-awareness-content-block li:hover::before,
+.handling-breaches-content-block li:hover::before,
+.mastering-passwords-content-block li:hover::before {
+  opacity: 1;
 }
 
 /* Emoji display styles */
