@@ -42,20 +42,9 @@ FortifyNow aims to improve cybersecurity awareness among users, providing straig
 2. Navigate to the project directory:
    ```bash
    cd FortifyNow
+   npm i
    ```
-3. Install the necessary dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Add your "Have I Been Pwned" API key in a `.env` file:
-   ```
-   HIBP_API_KEY=your_api_key_here
-   ```
-
-5. Run the Flask application:
-   ```bash
-   flask run
-   ```
+   
 
 ### Wireframe and Design Reference
 
