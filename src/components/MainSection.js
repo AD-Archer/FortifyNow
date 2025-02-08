@@ -31,7 +31,7 @@ function MainSection() {
         {/* Main Buttons Section for Desktop */}
         <div className="main-buttons desktop-buttons">
           <button 
-            onClick={() => handleNavigation('/mastering-passwords')} 
+            onClick={() => handleNavigation('/educational-resources')} 
             className="action-button"
           >
             Master Passwords
@@ -53,7 +53,7 @@ function MainSection() {
         {/* Main Buttons Section for Mobile */}
         <div className="main-buttons mobile-buttons">
           <button 
-            onClick={() => handleNavigation('/mastering-passwords')} 
+            onClick={() => handleNavigation('/educational-resources')} 
             className="action-button"
           >
             Master Passwords

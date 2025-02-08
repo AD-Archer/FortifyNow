@@ -12,9 +12,7 @@ import EducationalResources from "./components/EducationalResources";
 import HandlingBreaches from "./components/LibraryModules/HandlingBreaches";
 
 //Modules
-import MasteringPasswords from "./components/LibaryModules/MasteringPasswords";
-
-// Add these imports
+import MasteringPasswords from "./components/LibraryModules/MasteringPasswords";
 import SecurityProtection from "./components/LibraryModules/SecurityProtection";
 import TwoFactorAuth from "./components/LibraryModules/TwoFactorAuth";
 import PhishingAwareness from "./components/LibraryModules/PhishingAwareness";

@@ -1,5 +1,6 @@
 import React from "react";
 import "../LibraryModules/styles/SharedModuleStyles.css";
+import EducationalResourcesButton from "./ReturnButton";
 
 const TwoFactorAuth = () => {
   return (
@@ -66,6 +67,8 @@ const TwoFactorAuth = () => {
           </ul>
           <div className="emoji-display">💾 📱 💻 ⚡</div>
         </div>
+        <EducationalResourcesButton />
+
       </section>
     </div>
   );

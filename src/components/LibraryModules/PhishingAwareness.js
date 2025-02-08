@@ -1,5 +1,6 @@
 import React from "react";
 import "../LibraryModules/styles/SharedModuleStyles.css";
+import EducationalResourcesButton from "./ReturnButton";
 
 const PhishingAwareness = () => {
   return (
@@ -66,6 +67,8 @@ const PhishingAwareness = () => {
           </ul>
           <div className="emoji-display">🛡️ 🔒 ✅ 🚫</div>
         </div>
+        <EducationalResourcesButton />
+
       </section>
     </div>
   );

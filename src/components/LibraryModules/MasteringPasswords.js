@@ -1,5 +1,6 @@
 import React from "react";
 import "../LibraryModules/styles/SharedModuleStyles.css";
+import EducationalResourcesButton from "./ReturnButton";
 
 const MasteringPasswords = () => {
   return (
@@ -62,6 +63,8 @@ const MasteringPasswords = () => {
           </ul>
           <div className="emoji-display">👑 🔄 🛡️ 🎯</div>
         </div>
+        <EducationalResourcesButton />
+
       </section>
     </div>
   );
