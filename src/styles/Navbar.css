@@ -9,9 +9,9 @@
   left: 0;
   right: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+  background: linear-gradient(135deg, #3f51b5, #1a237e);  /* Blue gradient */
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(74, 20, 140, 0.3);  /* Adjusted shadow to match */
   transition: background-color 0.3s ease;
   margin-bottom: 50px;
 }
@@ -40,15 +40,14 @@
 }
 
 .navbar-links a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
 }
 
 .navbar-links a:hover {
-  color: #4caf50;
+  color: white;
 }
 
 /* Hamburger Menu */
