@@ -1,151 +1,181 @@
-/* Ensure the body and html take up the full height */
-html, body {
-  height: 100%;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-}
+/* HaveIBeenPwned Component Styles */
 
-/* Pwned Check Page Styles */
-.pwned-check-container {
+.pwned-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #fafafa;
-  min-height: 100vh; /* Ensures the container takes full height of the viewport */
-  justify-content: center; /* Centers the content vertically */
-  box-sizing: border-box;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  min-height: 90vh;
+  background-color: #f0f2f5;
 }
 
-.pwned-check-container h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 30px; /* Increased margin to prevent clipping */
+.pwned-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 0 15px; /* Ensure padding around header on small screens */
+  min-height: 80vh;
 }
 
-.pwned-check-container input {
+.pwned-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #4452c5;
+}
+
+.pwned-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.pwned-description {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  max-width: 90%;
+}
+
+.pwned-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.pwned-input {
+  width: 100%;
   padding: 12px;
   font-size: 1rem;
-  border-radius: 8px;
-  margin-bottom: 20px;
   border: 1px solid #ccc;
-  width: 100%;
-  max-width: 500px; /* Wider max-width for larger screens */
-  box-sizing: border-box; /* Prevents clipping */
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
-.pwned-check-container button {
-  padding: 14px 28px;
-  font-size: 1rem;
-  background-color: #4caf50;
+.pwned-input:focus {
+  border-color: #4452c5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(68, 82, 197, 0.2);
+}
+
+.pwned-btn {
+  padding: 12px 24px;
+  background-color: #4452c5;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Button spans full width */
-  max-width: 500px; /* Ensure button width aligns with input */
-  box-sizing: border-box;
+  transition: background-color 0.2s ease;
 }
 
-.pwned-check-container button:hover {
-  background-color: #388e3c;
+.pwned-btn:hover:not(:disabled) {
+  background-color: #3a45a1;
 }
 
-.pwned-check-container button:disabled {
-  background-color: #ccc;
+.pwned-btn:disabled {
+  background-color: #c2c6d2;
   cursor: not-allowed;
 }
 
-.pwned-check-container .result {
-  margin-top: 30px;
-  font-size: 1.2rem;
-  color: #333;
-  text-align: center; /* Center-align results */
-  padding: 0 15px; /* Ensure padding on smaller screens */
+.pwned-info {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  text-align: left;
 }
 
-.pwned-check-container .error {
-  margin-top: 30px;
-  font-size: 1.2rem;
-  color: red;
-  text-align: center;
+.pwned-info p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
 }
 
-.pwned-check-container ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 20px; /* Added space between result and list */
+.info-icon {
+  margin-right: 8px;
+  min-width: 20px;
 }
 
-.pwned-check-container ul li {
-  margin-bottom: 12px;
-  text-align: center; /* Center-align list items */
+.pwned-tips {
+  width: 100%;
+  text-align: left;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+  margin-top: auto;
 }
 
-.pwned-check-container ul li a {
-  color: #4caf50;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.pwned-tips h4 {
+  color: #4452c5;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
-.pwned-check-container ul li a:hover {
-  color: #388e3c;
-  text-decoration: underline;
+.pwned-tips ul {
+  margin: 0;
+  padding-left: 1.5rem;
 }
 
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .pwned-check-container {
-    padding: 20px;
-  }
+.pwned-tips li {
+  margin-bottom: 0.75rem;
+  color: #444;
+  font-size: 0.95rem;
+}
 
-  .pwned-check-container h2 {
-    font-size: 1.8rem; /* Slightly smaller text on mobile */
-    margin-bottom: 25px;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .pwned-container {
+    padding: 1rem 0.5rem;
+    min-height: auto;
   }
-
-  .pwned-check-container input {
-    max-width: 90%; /* Input takes up more space on smaller screens */
-    font-size: 1rem;
-    margin-bottom: 18px; /* Adjusted margin */
+  
+  .pwned-card {
+    padding: 1.5rem 1rem;
+    min-height: auto;
   }
-
-  .pwned-check-container button {
-    max-width: 90%; /* Button width adjusted */
-    font-size: 1rem;
+  
+  .pwned-title {
+    font-size: 1.5rem;
   }
-
-  .pwned-check-container .result, .pwned-check-container .error {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-    margin-top: 25px;
-  }
-
-  .pwned-check-container ul li {
-    font-size: 1rem; /* Adjust list item font size */
+  
+  .pwned-description {
+    font-size: 0.95rem;
   }
 }
 
-@media (max-width: 480px) {
-  .pwned-check-container h2 {
-    font-size: 1.6rem; /* Even smaller text on very small screens */
-    margin-bottom: 20px;
+@media (min-width: 1200px) {
+  .pwned-container {
+    padding: 3rem 1rem;
   }
-
-  .pwned-check-container input {
-    max-width: 90%;
-    font-size: 0.9rem; /* Slightly smaller font size for input */
+  
+  .pwned-card {
+    padding: 3rem;
+    max-width: 800px;
   }
-
-  .pwned-check-container button {
-    max-width: 90%;
-    font-size: 1rem;
+  
+  .pwned-form {
+    max-width: 600px;
   }
-
-  .pwned-check-container .result, .pwned-check-container .error {
-    font-size: 1rem;
+  
+  .pwned-middle-image {
+    width: 450px;
+  }
+  
+  .pwned-image-container {
+    margin: 2rem 0;
   }
 }

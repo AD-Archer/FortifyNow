@@ -3,102 +3,87 @@ import "../styles/HaveIBeenPwned.css";
 
 const HaveIBeenPwned = () => {
   const [email, setEmail] = useState("");
-  const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
 
-  // Function to handle the API call
-  const checkPwned = async () => {
-    setLoading(true);
-    setError(null);
-    setResult(null);
-
-    const apiUrl = `https://haveibeenpwned.com/api/v3/breachedaccount/${email}`;
-
-    try {
-      const response = await fetch(apiUrl, {
-        method: "GET",
-        headers: {
-          "User-Agent": "YourAppNameHere", // HIBP requires a User-Agent header
-          "hibp-api-key": "YOUR_API_KEY", // Replace with your actual API key
-        },
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setResult(data);
-      } else if (response.status === 404) {
-        setResult("No breaches found for this email!");
-      } else {
-        setError("Error fetching data, please try again.");
-      }
-    } catch (err) {
-      setError("Something went wrong, please try again later.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Redirect with confirmation
-  const handleRedirect = () => {
+  // Function to handle the redirect to HIBP with email
+  const handleCheckAndRedirect = () => {
+    if (!email) return;
     const confirmRedirect = window.confirm(
-      "You are about to leave the site and visit Have I Been Pwned. Do you want to proceed?"
+      `You are about to leave the site and check your email (${email}) on Have I Been Pwned. Do you want to proceed?`
     );
-
     if (confirmRedirect) {
-      window.location.href = "https://haveibeenpwned.com";
+      const encodedEmail = encodeURIComponent(email);
+      window.location.href = `https://haveibeenpwned.com/account/${encodedEmail}`;
     }
   };
 
   return (
-    <div className="pwned-check-container">
-      <h2>Check if your email address is in a data breach!</h2>
-
-      <input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-
-      <button onClick={checkPwned} disabled={loading || !email}>
-        {loading ? "Checking..." : "Check Email"}
-      </button>
-
-      {result && (
-        <div className="result">
-          {Array.isArray(result) ? (
-            <div>
-              <h3>Breaches Found:</h3>
-              <ul>
-                {result.map((breach) => (
-                  <li key={breach.Name}>
-                    <p>{breach.Name}</p>
-                    <p>{breach.Domain}</p>
-                    <a
-                      href={breach.Link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      More Info
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            <p>{result}</p>
-          )}
+    <div className="pwned-container">
+      <div className="pwned-card">
+        <div className="pwned-icon">
+          <span role="img" aria-label="search">
+            🔍
+          </span>
         </div>
-      )}
 
-      {error && <div className="error">{error}</div>}
+        <h2 className="pwned-title">Have I Been Pwned?</h2>
 
-      {/* Button to redirect to Have I Been Pwned */}
-      <button onClick={handleRedirect}>Visit Have I Been Pwned</button>
-      <label>
-        If check email button isn't working click here to visit the full site
-      </label>
+        <p className="pwned-description">
+          Instantly check if your email address has appeared in a known data
+          breach.
+        </p>
+
+        <form
+          className="pwned-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleCheckAndRedirect();
+          }}
+        >
+          <input
+            type="email"
+            className="pwned-input"
+            placeholder="Enter your email address..."
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <button
+            className="pwned-btn"
+            type="submit"
+            disabled={!email}
+          >
+            Check Email
+          </button>
+        </form>
+
+        <div className="pwned-info">
+          <p>
+            <span className="info-icon">ℹ️</span> By clicking the button, you
+            will be redirected to the official{" "}
+            <b>Have I Been Pwned</b> website to check if your email has been
+            compromised in a data breach.
+          </p>
+        </div>
+        
+        <div className="pwned-image-container">
+          <img 
+            src="/images/importanceofstrongpasswords.png" 
+            alt="Security illustration" 
+            className="pwned-middle-image" 
+          />
+        </div>
+
+        <div className="pwned-tips">
+          <h4>💡 Security Tips:</h4>
+          <ul>
+            <li>Use unique passwords for every account.</li>
+            <li>Enable two-factor authentication wherever possible.</li>
+            <li>
+              Change your password immediately if your email is found in a breach.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
